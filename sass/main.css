@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Lexend Deca;
+  src: url(../fonts/LexendDeca-Regular.ttf);
+}
+
+@font-face {
+  font-family: Big Shoulder;
+  src: url(../fonts/BigShouldersDisplay-Black.ttf);
+  src: url(../fonts/BigShouldersDisplay-ExtraBold.ttf);
+  src: url(../fonts/BigShouldersDisplay-SemiBold.ttf);
+}
+
+body {
+  font-family: Big Shoulder;
+  font-size: 15px;
+}
+
+p {
+  font-family: Lexend Deca;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .container .sedan-wrapper {
+  background-color: #e38826;
+  color: white;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .container .sedan-wrapper h1 {
+  margin: 30px 0px;
+}
+
+main .container .sedan-wrapper p {
+  line-height: 1.8rem;
+}
+
+main .container .suvs-wrapper {
+  background-color: #006970;
+  color: white;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .container .suvs-wrapper h1 {
+  margin: 30px 0px;
+}
+
+main .container .suvs-wrapper p {
+  line-height: 1.8rem;
+}
+
+main .container .luxury-wrapper {
+  background-color: #004241;
+  color: white;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .container .luxury-wrapper h1 {
+  margin: 30px 0px;
+}
+
+main .container .luxury-wrapper p {
+  line-height: 1.8rem;
+}
+
+main .container button {
+  margin-top: auto;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */
