@@ -1,87 +1,118 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: Lexend Deca;
-    src: url(../fonts/LexendDeca-Regular.ttf);
-
+  font-family: Lexend Deca;
+  src: url(../fonts/LexendDeca-Regular.ttf);
 }
 @font-face {
+  font-family: Big Shoulder;
+  src: url(../fonts/BigShouldersDisplay-Black.ttf);
+  src: url(../fonts/BigShouldersDisplay-ExtraBold.ttf);
+  src: url(../fonts/BigShouldersDisplay-SemiBold.ttf);
+}
+
+body {
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+@mixin wrapper($bg) {
+  background-color: $bg;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 500px;
+
+  h1 {
+    margin: 30px 0px;
     font-family: Big Shoulder;
-    src: url(../fonts/BigShouldersDisplay-Black.ttf);
-    src: url(../fonts/BigShouldersDisplay-ExtraBold.ttf);
-    src: url(../fonts/BigShouldersDisplay-SemiBold.ttf);
+  }
 
+  p {
+    line-height: 1.8rem;
+  }
 }
 
-body{
-    font-family: Big Shoulder;
-    font-size: 15px;
-}
+@mixin btnStyle($color) {
+  margin-top: auto;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: $color;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-out;
+  bottom: 0;
+  left: 0;
 
-p{
-    font-family: Lexend Deca;
-    color: hsla(0, 0%, 100%, 0.75);
-    font-weight: 400;
-}
-
-@mixin wrapper($bg){
-    background-color: $bg;
+  &:hover {
+    background-color: transparent;
     color: white;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    h1{
-        margin: 30px 0px;
-    }
-
-    p{
-        line-height: 1.8rem;
-    }
+    border: 2px solid white;
+  }
 }
 
+main {
+  padding: 50px 10px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-main{
-    min-height: 100vh;
+  .container {
+  
+    max-width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #eeee;
     display: flex;
+    // flex: 1;
+
+    .sedan-wrapper {
+      @include wrapper(hsl(31, 77%, 52%));
+    }
+    .suvs-wrapper {
+      @include wrapper(hsl(184, 100%, 22%));
+    }
+    .luxury-wrapper {
+      @include wrapper(hsl(179, 100%, 13%));
+    }
+
+    .sedan-btn {
+      @include btnStyle(hsl(31, 77%, 52%));
+    }
+
+    .suvs-btn {
+      @include btnStyle(hsl(184, 100%, 22%));
+    }
+
+    .luxury-btn {
+      @include btnStyle(hsl(179, 100%, 13%));
+    }
+  }
+}
+
+@media all and(max-width:950px) {
+  .container {
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    .container{
-        width: 100%;
-        max-width: 1000px;
-        min-height: 50vh;
-        border-radius: 10px;
-        overflow: hidden;
-        background-color: #eeee ;
-        display: flex;
-        flex: 1;
-        
-
-        .sedan-wrapper{
-            @include wrapper(hsl(31, 77%, 52%));
-        }
-        .suvs-wrapper{
-            @include wrapper(hsl(184, 100%, 22%)); 
-        }
-        .luxury-wrapper{
-            @include wrapper(hsl(179, 100%, 13%));
-
-        }
-
-
-        button{
-            margin-top: auto;
-            width: 130px;
-            height: 40px;
-            border-radius: 50px;
-            border: none;
-        }
+    div {
+      width: 330px;
     }
+  }
 }
-

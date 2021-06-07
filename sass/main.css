@@ -18,17 +18,17 @@
 }
 
 body {
-  font-family: Big Shoulder;
+  font-family: Lexend Deca;
   font-size: 15px;
+  font-weight: 500;
 }
 
 p {
-  font-family: Lexend Deca;
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 400;
 }
 
 main {
+  padding: 50px 10px;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,18 +42,13 @@ main {
 }
 
 main .container {
-  width: 100%;
   max-width: 1000px;
-  min-height: 50vh;
   border-radius: 10px;
   overflow: hidden;
   background-color: #eeee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 main .container .sedan-wrapper {
@@ -70,10 +65,12 @@ main .container .sedan-wrapper {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  min-height: 500px;
 }
 
 main .container .sedan-wrapper h1 {
   margin: 30px 0px;
+  font-family: Big Shoulder;
 }
 
 main .container .sedan-wrapper p {
@@ -94,10 +91,12 @@ main .container .suvs-wrapper {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  min-height: 500px;
 }
 
 main .container .suvs-wrapper h1 {
   margin: 30px 0px;
+  font-family: Big Shoulder;
 }
 
 main .container .suvs-wrapper p {
@@ -118,21 +117,99 @@ main .container .luxury-wrapper {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  min-height: 500px;
 }
 
 main .container .luxury-wrapper h1 {
   margin: 30px 0px;
+  font-family: Big Shoulder;
 }
 
 main .container .luxury-wrapper p {
   line-height: 1.8rem;
 }
 
-main .container button {
+main .container .sedan-btn {
   margin-top: auto;
   width: 130px;
   height: 40px;
   border-radius: 50px;
-  border: none;
+  border: 2px solid transparent;
+  color: #e38826;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+main .container .sedan-btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+main .container .suvs-btn {
+  margin-top: auto;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: #006970;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+main .container .suvs-btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+main .container .luxury-btn {
+  margin-top: auto;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: #004241;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+main .container .luxury-btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+@media all and (max-width: 950px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container div {
+    width: 330px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
